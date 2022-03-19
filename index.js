@@ -127,3 +127,57 @@
 // }
 // console.log(add(3)(4)); //7
 //////
+
+///////=====HTML///////////////
+//
+// The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+
+// <meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+
+// Metadata will not be displayed on the page, but is machine parsable.
+
+// Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+
+// There is a method to let web designers take control over the viewport (the user's visible area of a web page), through the <meta> tag (See "Setting The Viewport" example below).
+/////
+//
+////What is iframe and how it works
+//An iFrame or Inline Frame is a component of an HTML element that allows you to embed documents, videos, and interactive media within a page. By doing this, you can display a secondary webpage on your main page.
+//
+{
+  /* <iframe src="https://www.youtube.com/embed/dXBohfjc4WA" width="680" height="480" allowfullscreen></iframe> */
+}
+//
+////////
+///////////SEO///
+// SEO means Search Engine Optimization and is the process used to optimize a website's technical configuration, content relevance and link popularity so its pages can become easily findable, more relevant and popular towards user search queries, and as a consequence, search engines rank them better.
+////
+//////What is Character Encoding
+///ASCII was the first character encoding standard. ASCII defined 128 different characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special characters like ! $ + - ( ) @ < > .
+////
+///
+////////What’s new in HTML5
+//Intro of audio and video
+//Vector Graphics
+///Header and Footer
+//Figure and Figcaption:
+///Nav tag
+///Progress tag
+//Placeholder Attribute:
+//Email attribute
+//Storage =>    In the case of HTML, we can use the browser as the temporary storage whereas, in the case of HTML5, application cache, web SQL database, and web storage is used.
+//////Canvas vs SVG
+//=== Canvas is a JavaScript drawing API
+
+//////////
+///////What does a DOCTYPE do
+//The HTML document type declaration, also known as DOCTYPE, is the first line of code required in every HTML or XHTML document. The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.
+//////////////////
+//What are `defer` and `async` attributes on a <script> tag
+///
+// Without async or defer, browser will run your script immediately, before rendering the elements that's below your script tag.
+
+// With async (asynchronous), browser will continue to load the HTML page and render it while the browser load and execute the script at the same time.
+
+// With defer, browser will run your script when the page finished parsing. (not necessary finishing downloading all image files. This is good.)
+///////////////
