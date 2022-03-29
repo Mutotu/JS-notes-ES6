@@ -181,3 +181,67 @@
 
 // With defer, browser will run your script when the page finished parsing. (not necessary finishing downloading all image files. This is good.)
 ///////////////
+/////////////////CSS//////
+////How would you approach fixing browser-specific styling issues
+//
+// After identifying the issue and the offending browser, use a separate style sheet that only loads when that specific browser is being used. This technique requires server-side rendering though.
+// Use libraries like Bootstrap that already handles these styling issues for you.
+// Use autoprefixer to automatically add vendor prefixes to your code.
+// Use Reset CSS or Normalize.css.
+
+///////////////////////////////
+
+// //////////Give an example of an @media property other than screen
+// The @media rule is used in media queries to apply different styles for different media types/devices.
+
+// Media queries can be used to check many things, such as:
+
+// width and height of the viewport
+// width and height of the device
+// orientation (is the tablet/phone in landscape or portrait mode?)
+// resolution
+// Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
+
+////////////
+// //////What's the difference between inline and inline-block?
+// .inline-element {
+//   display: inline;
+//   width: 1000px; /* ❌ won't have any effect */
+//   height: 1000px; /* ❌ won't have any effect */
+// }
+
+// .inline-block-element {
+//   display: inline-block;
+//   width: 1000px; /* ✅  yes, it will work */
+//   height: 1000px; /* ✅  yes, it will work */
+// }
+
+///////////////////////////////
+
+/////////////////  Describe pseudo-elements and discuss what they are used for.
+
+// A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, ::first-line can be used to change the font of the first line of a paragraph.
+
+// /* The first line of every <p> element. */
+// p::first-line {
+//   color: blue;
+//   text-transform: uppercase;
+// }
+//////////////////////////////////////////////////////////////
+// v////////////////////What's the difference between a relative, fixed, absolute and statically positioned element?
+////Static =>position: static is the default value that an element will have. This means if you don't declare position for an element in CSS, it will automatically be set to static.It’s important to note that having a static position is the same as not setting the position property at all. (This will come into play a bit later on with absolute positioning.)
+// Relative =>position: relative is similar to static in that relatively positioned elements will follow the normal flow of the webpage. But the main difference is that using relative will now unlock the other CSS layout properties.Think about it this way: you are setting the element to be positioned relative to other elements on the page. Let’s see what this looks like, and adjust our CSS like this:
+// .first {
+//   position: static;
+// }
+// .another {
+//   position: relative;
+//   top: 50px;
+// }
+// All the CSS is exactly the same, except that we changed the second element to use position: relative. Doing this makes that top: 50px work!
+// Absolute => position: absolute will cause an element to be taken out of that normal flow of the webpage. Wait, what does that mean?So before, using static or relative positioning, elements would be nicely displayed one below the other, depending on their order in the HTML markup. But with absolute positioning, the element is completely taken out of that entire flow.
+
+//Fixed =>position: fixed will take the element out of the normal flow, and also position it in the same place in the viewport (what's visible on screen). This means that scrolling will not affect its position at all.
+//////////////////////////////////////////////////////////////
+// ///////////////////// Why is it generally a good idea to position CSS <link>s between <head></head>? Do you know any exceptions?
+// CSS files are linked in the head because they get applied regardless of DOM already rendered or not. Hence the webpage looks elegant as soon as the page loads. However just like JS you can link the CSS at the end which would mean that the webpage first loads with just plain HTML and then the CSS is applied to it. This shift is clearly visible to the user and moreover an important thing to remember is that the page would load with bare minimum HTML and if the user has slow Internet connection, the CSS load would take considerable amount of time, which means that the webpage shows just the HTML meanwhile. This might make the user close the website without waiting for it to load fully.
